@@ -5,6 +5,10 @@
 
 ![](04.png)
 
+## fofa 
+
+![](./fofa.png)
+
 ![](01.png)
 ![](02.png)
 ![](03.png)
@@ -335,6 +339,23 @@ public class TriggerParam implements Serializable{
 ```
 
 ## 历史漏洞 XXL-JOB-admin 后台反弹shell
+
+`(需要后台账号密码，默认账号密码admin/123456)`
+
+`/xxl-job-admin/src/test/java/com/xxl/job/admin/controller/JobInfoControllerTest.java`
+
+```
+  @Before
+  public void login() throws Exception {
+    MvcResult ret = mockMvc.perform(
+        post("/login")
+            .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+            .param("userName", "admin")
+            .param("password", "123456")
+    ).andReturn();
+    cookie = ret.getResponse().getCookie(LoginService.LOGIN_IDENTITY_KEY);
+  }
+```
 
 `任务调度中心-任务管理-新增`
 
