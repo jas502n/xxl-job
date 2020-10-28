@@ -55,7 +55,34 @@ content-type: text/html;charset=UTF-8
 content-length: 61
 connection: keep-alive
 
-{"code":500,"msg":"invalid request, HttpMethod not support."}
+{
+  "code": 500,
+  "msg": "invalid request, HttpMethod not support."
+}
+
+
+POST
+
+POST / HTTP/1.1
+Host: 127.0.0.1:9999
+Accept: */*
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Connection: close
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 0
+
+
+HTTP/1.1 200 OK
+content-type: text/html;charset=UTF-8
+content-length: 63
+
+{
+  "code": 500,
+  "msg": "invalid request, uri-mapping(/) not found."
+}
 ```
 
 ## 参考链接
