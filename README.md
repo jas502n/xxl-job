@@ -372,6 +372,23 @@ public class TriggerParam implements Serializable{
 
 
 
+```
+POST /xxl-job-admin/jobinfo/trigger HTTP/1.1
+Host: 10.20.24.99:8080
+Content-Length: 64
+Accept: application/json, text/javascript, */*; q=0.01
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+Origin: http://10.20.24.99:8080
+Referer: http://10.20.24.99:8080/xxl-job-admin/jobinfo
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: XXL_JOB_LOGIN_IDENTITY=7b226964223a312c22757365726e616d65223a2261646d696e222c2270617373776f7264223a226531306164633339343962613539616262653536653035376632306638383365222c22726f6c65223a312c227065726d697373696f6e223a6e756c6c7d
+Connection: close
+
+id=2&executorParam=&addressList=http%3A%2F%2F10.88.105.53%3A9999
+```
 
 
 
