@@ -407,6 +407,11 @@ tcpdump: listening on pktap, link-type PKTAP (Apple DLT_PKTAP), capture size 262
 ```
 10.20.24.99（任务调度中心 xxl-job-admin）  > 10.88.105.53:9999 (执行器 xxl.job.executor)
 User-Agent: Java/1.8.0_60
+
+
+7   0.036046    10.20.24.99 10.88.105.53    HTTP    392 POST /run HTTP/1.1  (application/json)
+8   0.036058    10.88.105.53    10.20.24.99 TCP 66  9999 → 50724 [ACK] Seq=1 Ack=645 Win=131456 Len=0 TSval=1636700605 TSecr=915202206
+9   0.037061    10.88.105.53    10.20.24.99 HTTP    180 HTTP/1.1 200 OK  (text/html)
 ```
 
 ```
