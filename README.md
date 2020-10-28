@@ -46,6 +46,17 @@ content-length: 12
 {"code":200}
 ```
 
+## 9999 default page
+```
+http://127.0.0.1:9999/
+
+HTTP/1.1 200 OK
+content-type: text/html;charset=UTF-8
+content-length: 61
+connection: keep-alive
+
+{"code":500,"msg":"invalid request, HttpMethod not support."}
+```
 
 ## 参考链接
 
