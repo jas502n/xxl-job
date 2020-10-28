@@ -1,5 +1,7 @@
 # xxl-job 执行器 RESTful API 未授权访问 RCE
 
+`XXL-JOB <= 2.2.0`
+
 
 ![](04.png)
 
