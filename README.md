@@ -334,6 +334,14 @@ public class TriggerParam implements Serializable{
 }
 ```
 
+## 历史漏洞 XXL-JOB-admin 后台反弹shell
+
+`任务调度中心-任务管理-新增`
+
+
+
+
+
 
 ## 参考链接
 
