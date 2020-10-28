@@ -338,6 +338,8 @@ public class TriggerParam implements Serializable{
 }
 ```
 
+![](./executorHandler.png)
+
 ## 历史漏洞 XXL-JOB-admin 后台反弹shell
 
 `(需要后台账号密码，默认账号密码admin/123456)`
