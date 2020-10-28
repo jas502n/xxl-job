@@ -338,6 +338,20 @@ public class TriggerParam implements Serializable{
 
 `任务调度中心-任务管理-新增`
 
+![](./images/old/001.png)
+![](./images/old/002.png)
+![](./images/old/003.png)
+![](./images/old/004.png)
+![](./images/old/005.png)
+![](./images/old/006.png)
+![](./images/old/007.png)
+![](./images/old/008.png)
+![](./images/old/009.png)
+![](./images/old/010.png)
+
+
+
+
 
 
 
@@ -346,4 +360,5 @@ public class TriggerParam implements Serializable{
 ## 参考链接
 
 https://landgrey.me/blog/18/
+
 https://www.xuxueli.com/xxl-job/
