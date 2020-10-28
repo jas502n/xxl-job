@@ -370,9 +370,9 @@ public class TriggerParam implements Serializable{
 ![](./images/old/007.png)
 ![](./images/old/008.png)
 ![](./images/old/009.png)
-![](./images/old/010.png)
 
 
+## xxl-job executor
 
 ```
 POST /xxl-job-admin/jobinfo/trigger HTTP/1.1
@@ -391,6 +391,7 @@ Connection: close
 
 id=2&executorParam=&addressList=http%3A%2F%2F10.88.105.53%3A9999
 ```
+![](./images/old/010.png)
 
 ## wireshark 抓包看看
 
