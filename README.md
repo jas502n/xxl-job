@@ -2,6 +2,7 @@
 
 `XXL-JOB <= 2.2.0`
 
+![](./xxl-job.gif)
 
 ![](04.png)
 
